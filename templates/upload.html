@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Archivo</title>
+</head>
+<body>
+    <h1>Subir Archivo a Google Drive</h1>
+    <form action="/upload" method="post">
+        <label for="file_url">URL del archivo:</label>
+        <input type="text" name="file_url" required>
+        <br>
+        <label for="file_name">Nombre del archivo:</label>
+        <input type="text" name="file_name" required>
+        <br>
+        
+        <!-- Nuevo campo para el enlace de YouTube -->
+        <label for="youtube_url">URL del video de YouTube:</label>
+        <input type="text" name="youtube_url">
+        <br>
+        
+        <input type="submit" value="Subir archivo">
+    </form>
+</body>
+</html>
