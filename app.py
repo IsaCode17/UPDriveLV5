@@ -127,7 +127,9 @@ def download_youtube_video(url, filename):
         logger.info(f"Descargando video de YouTube desde: {url}")
         ydl_opts = {
             'outtmpl': '%(title)s.%(ext)s',  # Usa el título original del video
-            'format': 'best'  # Puedes ajustar el formato aquí si lo deseas
+            'format': 'best',  # Puedes ajustar el formato aquí si lo deseas
+            'cookiefile': 'cookies.txt'  # Añadir aquí el archivo de cookies
+        
         }
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(url, download=True)
